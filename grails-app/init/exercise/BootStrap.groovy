@@ -4,8 +4,14 @@ import demo.Role
 import demo.Topic
 import demo.User
 import demo.UserRole
+import grails.core.GrailsApplication
+
+import javax.servlet.ServletContext
 
 class BootStrap {
+    ServletContext servletContext
+    GrailsApplication grailsApplication
+
 
     def init = { servletContext ->
    /*     User kapil=new User(name: "kap", username: "kapil@kap.com",password: "kapil",enabled: true).save()
@@ -27,6 +33,7 @@ class BootStrap {
             .addToTopics(english)
             .addToTopics(hindi).save(flush:true)
 */
+
 
 
     }

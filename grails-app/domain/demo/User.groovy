@@ -16,7 +16,7 @@ class User implements Serializable {
     String username
     String password
     static hasMany = [topics: Topic,subscriptions:Subscription,resources:Resource]
-    boolean enabled = true
+    boolean enabled = false
     boolean accountExpired
 
 
@@ -29,11 +29,11 @@ class User implements Serializable {
 
     static constraints = {
         name nullable: false,blank: false
-        password nullable: false, blank: false, password: true ,minSize: 5 ,validator: { val,User obj->
+        password nullable: false, blank: false, password: true ,minSize: 5 /*,validator: {val,obj->
             if(obj.name.equals(val)){
                 return "password should be not be same as your name"
             }
-        }
+        }*/
         username nullable: false, blank: false, unique: true, email: true
     }
 

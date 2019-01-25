@@ -11,7 +11,11 @@
         </tr>
         <g:each var="topic" in="${followedTopic}">
             <tr class="table-danger">
-                <td>${topic.name}</td>
+                <td>
+                    <g:link controller="user" >
+                        ${topic.name}
+                    </g:link>
+                </td>
                 <td>${topic.createdBy.username}</td>
                 <td>
                     <g:link controller="subscription" action="unSubscribe" id="${topic.id}">
