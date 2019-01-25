@@ -131,7 +131,7 @@ grails :
         host : smtp.gmail.com
         port : 465
         username : kapilgpt06@gmail.com
-        password : pushpa.gupta
+        password : *
         props :
             mail.smtp.auth: true
             mail.smtp.starttls.enable: true
